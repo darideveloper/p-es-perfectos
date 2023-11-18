@@ -1,7 +1,15 @@
 import { metaData } from '@/lib/meta.js'
 import { regularFont } from '@/lib/fonts'
-import Head from 'next/head'
 
+import Head from 'next/head'
+import Header from '@/sections/header.jsx'
+
+/**
+ * Main layout with header and footer
+ * @param {node} children
+ * @param {string} subPage current subpage
+ * @returns {jsx}
+ */
 export default function RootLayout({ children, subPage = "" }) {
   return (
     <>
@@ -15,7 +23,7 @@ export default function RootLayout({ children, subPage = "" }) {
         content
         ${regularFont.className}
       `}>
-        <header>header</header>
+        <Header />
         <main>
           {children}
         </main>
