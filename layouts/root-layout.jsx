@@ -14,7 +14,7 @@ export default function RootLayout({ children, subPage = "" }) {
   return (
     <>
       <Head>
-        <title>{`{metaData.title}{subPage && "| " + ${subPage}}`}</title>
+        <title>{`${metaData.title} ${subPage && "| " + subPage}`}</title>
         <meta name="description" content={metaData.description} />
         <meta name="author" content={metaData.author} />
         <meta name="keywords" content={metaData.keywords} />
