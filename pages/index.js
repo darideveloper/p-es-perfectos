@@ -1,5 +1,3 @@
-import { titleFont } from "@/lib/fonts"
-
 import RootLayout from "@/layouts/root-layout"
 
 export default function Home() {
