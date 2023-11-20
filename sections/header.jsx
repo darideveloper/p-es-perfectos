@@ -55,6 +55,7 @@ export default function Header() {
       flex-row md:flex-col
       relative
     `}
+    id='header'
     >
 
       <Image
@@ -143,7 +144,7 @@ export default function Header() {
               <a 
                 href={social.href} 
                 target='_blank'
-                key={social}
+                key={key}
                 className={`
                   social
                   p-3
