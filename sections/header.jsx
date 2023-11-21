@@ -83,6 +83,7 @@ export default function Header() {
           items-center
           justify-between
           py-16 md:py-4
+          z-10
         `}>
 
         <nav
