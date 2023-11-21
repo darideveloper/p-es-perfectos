@@ -64,6 +64,8 @@ export default function Hero({ slides }) {
       id='hero'
     >
 
+      <h2 className='title-hidden'>Gelaría</h2>
+
       <Splide
         className={``}
         options={{

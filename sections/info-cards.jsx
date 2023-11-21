@@ -39,61 +39,70 @@ export default function InfoCards() {
       }
     },
   ]
-  
+
   return (
-    <section 
+    <section
       className={`
         container
         mx-auto
-        grid
-        grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
         w-10/12
-        my-28
+        my-6
       `}
       id="info-cards"
     >
-      {
-        cardsData.map ((cardData, index) => (
-          <article
-            key={index}
-            className={`
-              info-card
-              width-full
-              bg-blue
-              px-5
-              py-10
-              text-white
-            `}
-          >
-            <h3
-              className={`
-                text-3xl
-                mb-2
-              `}
-            >
-              {cardData.title}
-            </h3>
-            <p
-              className={`
-                opacity-60
-              `}
-            >
-              {cardData.description}
-            </p>
-            <BtnCta 
-              href={cardData.link.href}
-              label={cardData.link.label}
-              className={`
-                text-lg
-                hover:-translate-y-2
-                mt-6
-              `}
-              isPhantom={true}
-            />
+      <h2 className='title-hidden'>Servicios</h2>
 
-          </article>
-        ))
-      }
+      <div
+        className={`
+          content
+          grid
+          grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
+          w-full
+        `}>
+
+        {
+          cardsData.map((cardData, index) => (
+            <article
+              key={index}
+              className={`
+                info-card
+                width-full
+                bg-blue
+                px-5
+                py-10
+                text-white
+              `}
+            >
+              <h3
+                className={`
+                  text-3xl
+                  mb-2
+                `}
+              >
+                {cardData.title}
+              </h3>
+              <p
+                className={`
+                  opacity-60
+                `}
+              >
+                {cardData.description}
+              </p>
+              <BtnCta
+                href={cardData.link.href}
+                label={cardData.link.label}
+                className={`
+                  text-lg
+                  hover:-translate-y-2
+                  mt-6
+                `}
+                isPhantom={true}
+              />
+
+            </article>
+          ))
+        }
+      </div>
     </section>
   )
 }

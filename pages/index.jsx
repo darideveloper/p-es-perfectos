@@ -13,6 +13,7 @@ import InfoCards from "@/sections/info-cards"
 export default function Home({slides}) {
   return (
     <RootLayout>
+      <h1 className='title-hidden'>Pies Perfectos</h1>
       <Hero 
         slides={slides}  
       />
