@@ -3,30 +3,31 @@ import Link from 'next/link'
 
 /**
  * Link button
- * @param {string} herf link
+ * @param {string} href link
  * @param {string} label button label
  * @param {string} className extra css classes
+ * @param {boolean} isPhantom if true, the button will be transparent
+ * @returns {jsx}
  */
-export default function BtnCta({herf, label, className}) {
+export default function BtnCta({href, label, className, isPhantom=false}) {
   return (
     <Link 
-      href={herf}
+      href={href}
       className={`
         btn-cta
         text-2xl
         px-8
         py-2
+        inline-block
         rounded-md
         shadow-lg hover:shadow-none
         border-2
-        border-blue
-        bg-blue hover:bg-transparent
+        ${isPhantom ? 'border-white' : 'border-blue'}
+        ${isPhantom ? 'bg-transparent hover:bg-white opacity-80' : 'bg-blue hover:bg-transparent'}
         text-white hover:text-blue
         duration-300
-        hover:scale-105
         ${titleFont.className}
         ${className}
-
       `}
     >
       {label}

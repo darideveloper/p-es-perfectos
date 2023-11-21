@@ -2,6 +2,8 @@
 @tailwind components
 @tailwind utilities
 
+$blueColor: #2c5282
+
 body
   background-color: theme('colors.white')
 
@@ -14,4 +16,13 @@ body
 
 .splide__pagination__page.is-active
   background-color: theme('colors.green') !important
-  
+
+// Change colors of info cards
+.info-card:nth-child(2)
+  background-color: rgba($blueColor, 0.9)
+
+.info-card:nth-child(3)
+  background-color: rgba($blueColor, 0.85)
+
+.info-card:nth-child(4)
+  background-color: rgba($blueColor, 0.80)

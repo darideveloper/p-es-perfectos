@@ -171,13 +171,14 @@ export default function Header() {
       </div>
 
       <BtnCta 
-        herf="#cita"
+        href="#cita"
         label="Agendar cita"
         className={`
           hidden md:block
           absolute
           top-5
           right-5
+          hover:scale-105
         `}
       />
 

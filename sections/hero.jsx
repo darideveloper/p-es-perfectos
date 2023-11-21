@@ -59,6 +59,7 @@ export default function Hero({ slides }) {
       className={`
         hero
         w-full
+        my-5
       `}
       id='hero'
     >
