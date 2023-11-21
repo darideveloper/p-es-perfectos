@@ -48,11 +48,11 @@ export default function Header() {
       container
       mx-auto
       flex
-      items-center md:items-start
+      items-center md:items-start lg:items-center
       justify-between
       px-4
       md:pt-4
-      flex-row md:flex-col
+      flex-row md:flex-col lg:flex-row
       relative
     `}
     id='header'
@@ -89,7 +89,7 @@ export default function Header() {
         <nav
           className={`
           menu
-          w-full lg:w-auto 
+          w-full lg:w-auto lg:mx-auto
           h-full
         `}>
           <ul
@@ -113,7 +113,7 @@ export default function Header() {
                   href={link.href}
                   className={`
                     py-2
-                    px-8
+                    px-8 lg:p-2 xl:p-4
                     inline-block
                     hover:opacity-50 md:hover:opacity-100 
                     duration-300
@@ -131,14 +131,14 @@ export default function Header() {
         </nav>
 
         <div className={`
-            socials
+            socials-top
             flex
+            flex-row 
             items-center
             justify-center
-            w-full lg:w-auto
-            pb-10 md:pb-0
-            md:mt-4 lg:mt-0
-            lg:mr-4
+            w-full
+            pb-10
+            md:hidden
           `}>
           {
             socials.map ((social, key) => (
@@ -148,7 +148,7 @@ export default function Header() {
                 key={key}
                 className={`
                   social
-                  p-3
+                  p-3 lg:p-1
                   duration-200
                   hover:opacity-50
                 `}
@@ -174,11 +174,13 @@ export default function Header() {
         href="#cita"
         label="Agendar cita"
         className={`
+          text-center
           hidden md:block
-          absolute
+          absolute lg:static
           top-5
           right-5
           hover:scale-105
+          lg:w-80
         `}
       />
 
