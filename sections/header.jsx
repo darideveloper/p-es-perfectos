@@ -84,6 +84,8 @@ export default function Header() {
           justify-between
           py-16 md:py-4
           z-10
+          shadow-lg md:shadow-none
+          shadow-black
         `}>
 
         <nav
@@ -180,7 +182,7 @@ export default function Header() {
           top-5
           right-5
           hover:scale-105
-          lg:w-80
+          lg:w-80 xl:w-72
         `}
       />
 
