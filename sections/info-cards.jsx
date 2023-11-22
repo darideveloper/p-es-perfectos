@@ -1,3 +1,4 @@
+import H2 from "@/components/h2"
 import BtnCta from "@/components/btn-cta"
 
 /**
@@ -46,11 +47,14 @@ export default function InfoCards() {
         container
         mx-auto
         w-10/12
-        my-6
+        my-20
       `}
       id="info-cards"
     >
-      <h2 className='title-hidden'>Servicios</h2>
+      <H2
+        text="Servicios"
+        isHidden={true}
+      />
 
       <div
         className={`

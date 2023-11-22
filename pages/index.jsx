@@ -4,6 +4,7 @@ import path from 'path'
 import RootLayout from "@/layouts/root-layout"
 import Hero from "@/sections/hero"
 import InfoCards from "@/sections/info-cards"
+import Team from "@/sections/team"
 
 /**
  * Home page component
@@ -18,6 +19,7 @@ export default function Home({slides}) {
         slides={slides}  
       />
       <InfoCards />
+      <Team />
     </RootLayout>
   )
 }

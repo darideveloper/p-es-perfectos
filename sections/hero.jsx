@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import H2 from '@/components/h2'
 
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css/sea-green'
@@ -59,12 +60,15 @@ export default function Hero({ slides }) {
       className={`
         hero
         w-full
-        my-5
+        my-20
       `}
       id='hero'
     >
 
-      <h2 className='title-hidden'>Gelaría</h2>
+      <H2 
+        text="Galería principal"
+        isHidden={true}
+      />
 
       <Splide
         className={``}
