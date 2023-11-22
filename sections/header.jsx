@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import Image from 'next/image'
 import BtnMenu from '@/components/btn-menu.jsx'
@@ -14,6 +14,14 @@ import { titleFont } from '@/lib/fonts.js'
 export default function Header() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  useEffect(() => {
+    // Add aos to header in desktop
+    if (window.innerWidth > 768) {
+      const header = document.querySelector('#header')
+      header.setAttribute('data-aos', 'fade-down')
+    }
+  }, [])
 
   const links = [
     { href: "#", label: "Nuestro equipo" },
@@ -45,17 +53,17 @@ export default function Header() {
   return (
     <header
       className={`
-      container
-      mx-auto
-      flex
-      items-center md:items-start lg:items-center
-      justify-between
-      px-4
-      md:pt-4
-      flex-row md:flex-col lg:flex-row
-      relative
-    `}
-    id='header'
+        container
+        mx-auto
+        flex
+        items-center md:items-start lg:items-center
+        justify-between
+        px-4
+        md:pt-4
+        flex-row md:flex-col lg:flex-row
+        relative
+      `}
+      id='header'
     >
 
       <Image
@@ -83,7 +91,7 @@ export default function Header() {
           items-center
           justify-between
           py-16 md:py-4
-          z-10
+          z-20
           shadow-lg md:shadow-none
           shadow-black
         `}>

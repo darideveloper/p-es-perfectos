@@ -60,9 +60,9 @@ export default function Team() {
         `}
       >
         {
-          teamMembers.map((member, key) => (
+          teamMembers.map((member, index) => (
             <div
-              key={key}
+              key={index}
               className={`
                 member
                 flex
@@ -75,10 +75,12 @@ export default function Team() {
                 py-5
                 rounded-xl
                 group
-                duration-200
+                duration-500
                 hover:scale-105
-                shadow-lg hover:shadow-2xl
+                shadow-lg
               `}
+              data-aos="fade-down"
+              data-aos-delay={200*(teamMembers.length-index)}
             >
               <Image
                 src={`/team/${member.name.replaceAll(" ", "-")}.webp`}
@@ -87,7 +89,7 @@ export default function Team() {
                   w-10/12
                   rounded-full
                   mb-4
-                  duration-200
+                  duration-500
                   group-hover:-rotate-6
                 `}
                 width={200}
@@ -106,7 +108,7 @@ export default function Team() {
                   text-grey group-hover:text-blue
                   text-md
                   capitalize
-                  duration-200
+                  duration-500
                   text-md group-hover:text-xl
                   inline-block           
                   h-8       

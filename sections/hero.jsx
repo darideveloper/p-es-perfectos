@@ -63,6 +63,8 @@ export default function Hero({ slides }) {
         my-20
       `}
       id='hero'
+      data-aos="fade-up"
+      data-aos-delay="500"
     >
 
       <H2 
@@ -93,7 +95,7 @@ export default function Hero({ slides }) {
                 width={500}
                 height={500}
                 className={`
-                duration-200
+                duration-300
                 {/*Blur effect only in desktop*/}
                 ${!useArrows && "blur-sm hover:blur-none"}
               `}

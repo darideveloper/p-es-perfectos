@@ -76,6 +76,8 @@ export default function InfoCards() {
                 py-10
                 text-white
               `}
+              data-aos="fade-up"
+              data-aos-delay={200*index}
             >
               <h3
                 className={`
