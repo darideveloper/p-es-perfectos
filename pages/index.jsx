@@ -5,6 +5,7 @@ import RootLayout from "@/layouts/root-layout"
 import Hero from "@/sections/hero"
 import InfoCards from "@/sections/info-cards"
 import Team from "@/sections/team"
+import Contact from "@/sections/contact"
 
 /**
  * Home page component
@@ -20,6 +21,7 @@ export default function Home({slides}) {
       />
       <InfoCards />
       <Team />
+      <Contact />
     </RootLayout>
   )
 }
