@@ -1,7 +1,9 @@
 import H2 from "@/components/h2"
 import Loading from "@/components/loading"
+import Input from "@/components/input"
+import BtnSubmit from "@/components/btn-submit"
 
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 /**
  * Contact section
@@ -34,16 +36,18 @@ export default function Contact() {
   const [isLoading, setIsLoading] = useState(false)
 
   return (
-    <section className="contact mb-60">
+    <section className="contact">
 
       <H2
-        text="Contáctanos"
+        text="Agenda una cita"
       />
 
       <form
         action="#"
         method="post"
-        className={``}
+        className={`
+          
+        `}
       >
         <div
           className={`
@@ -85,14 +89,16 @@ export default function Contact() {
                 setIsLoading(true)
 
                 // Change map data
+                const location = locations.find(location => location.name === e.target.value)
                 setTimeout(() => {
-                  setSelectedLocation(locations.find(location => location.name === e.target.value))
-                }, 1000)
+                  setSelectedLocation(location)
+                }, 100)
 
                 // Hide loading
                 setTimeout(() => {
                   setIsLoading(false)
                 }, 2000)
+
               }}
               className={`
                 w-72
@@ -105,6 +111,8 @@ export default function Contact() {
                 border-2
                 border-blue
                 rounded-md
+                bg-blue
+                text-white
               `}
             >
               {locations.map((location, index) => {
@@ -157,7 +165,7 @@ export default function Contact() {
             relative
             h-80
           `}>
-          <Loading 
+          <Loading
             isVisible={isLoading}
             bgColor="bg-blue"
             extraClasses="w-full h-full"
@@ -175,13 +183,64 @@ export default function Contact() {
           </iframe>
         </div>
 
-        {/* <div
+        <div
           className={`
             inputs-wrapper
+            w-full
+            max-w-3xl
+            mx-auto
+            mt-12
+            flex
+            flex-wrap
+            items-center
+            justify-between
           `}
+          id="inputs-wrapper"
         >
+          <Input
+            name="name"
+            placeholder="Juan Pérez"
+            type="text"
+            label="Nombre"
+          />
 
-        </div> */}
+          <Input
+            name="telefono"
+            placeholder="55 1234 5678"
+            type="tel"
+            label="Teléfono"
+          />
+
+          <Input
+            name="email"
+            placeholder="sample@gmail.com"
+            type="email"
+            label="Correo"
+          />
+
+          <Input
+            name="fecha"
+            type="date"
+            label="Fecha"
+          />
+
+          <Input
+            name="Hora"
+            type="time"
+            label="Hora"
+          />
+
+          <BtnSubmit
+            label="Agendar"
+            className={`
+              w-48
+              text-center
+              mx-auto
+              scale-90
+              mt-4
+            `}
+          />
+        </div>
 
       </form>
 

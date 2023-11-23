@@ -18,9 +18,10 @@ module.exports = {
         white: '#ffffff',
         green: "#7dae39",
         blue: "#2c5282",
-        grey: "#76757a"
+        grey: "#76757a",
+        greylighy: "#c4c3c7",
       }
     },
   },
-  plugins: [],
+  plugins: [require("tw-elements-react/dist/plugin.cjs")]
 }

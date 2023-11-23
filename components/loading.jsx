@@ -53,7 +53,6 @@ export default function Loading({ isVisible = true, bgColor, extraClasses = "", 
         className={`
           ${isRelative ? 'w-2/6 h-auto' : 'w-20 h-20'}
         `}
-        priority={true}
       />
     </div>
   )
