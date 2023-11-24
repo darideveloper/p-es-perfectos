@@ -36,7 +36,7 @@ export default function Contact() {
   const [isLoading, setIsLoading] = useState(false)
 
   return (
-    <section className="contact">
+    <section className="contact" id="contact">
 
       <H2
         text="Agenda una cita"

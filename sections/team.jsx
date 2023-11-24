@@ -30,6 +30,7 @@ export default function Team() {
         mx-auto
         my-32
       `}
+      id="team"
     >
       <H2
         text="Nuestro Equipo"

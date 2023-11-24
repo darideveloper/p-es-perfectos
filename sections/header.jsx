@@ -24,10 +24,10 @@ export default function Header() {
   }, [])
 
   const links = [
-    { href: "#", label: "Nuestro equipo" },
-    { href: "#", label: "Contacto" },
-    { href: "#", label: "Acerca de" },
-    { href: "#", label: "Servicios" },
+    { href: "/#team", label: "Nuestro equipo" },
+    { href: "#contact", label: "Contacto" },
+    { href: "/about", label: "Acerca de" },
+    { href: "/services", label: "Servicios" },
   ]
 
 
@@ -188,7 +188,7 @@ export default function Header() {
       </div>
 
       <BtnCta
-        href="#cita"
+        href="#contact"
         label="Agendar cita"
         className={`
           text-center
