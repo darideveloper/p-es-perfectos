@@ -1,45 +1,28 @@
 import H2 from "@/components/h2"
 import BtnCta from "@/components/btn-cta"
+import { servicesData } from "@/lib/services"
+import { useEffect, useState } from "react"
 
 /**
  * Info cards section
  * @return {jsx}
  */
 export default function InfoCards() {
-  const cardsData = [
-    {
-      "title": "Servicio 1",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-      "link": {
-        "href": "#",
-        "label": "Contactar"
+
+  const [cardsData, setCardsData] = useState([])
+
+  useEffect(() => {
+    // Copy serviuces data
+    let cardsData = [...servicesData]
+    cardsData = cardsData.map (card => {
+      if (card.description.length > 80) {
+        card.description = card.description.slice(0, 80) + '...'
       }
-    },
-    {
-      "title": "Servicio 2",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-      "link": {
-        "href": "#",
-        "label": "Contactar"
-      }
-    },
-    {
-      "title": "Servicio 3",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-      "link": {
-        "href": "#",
-        "label": "Contactar"
-      }
-    },
-    {
-      "title": "Servicio 4",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-      "link": {
-        "href": "#",
-        "label": "Contactar"
-      }
-    },
-  ]
+      return card
+    })
+    setCardsData(cardsData)
+  }, [])
+ 
 
   return (
     <section
@@ -60,7 +43,7 @@ export default function InfoCards() {
         className={`
           content
           grid
-          grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
+          grid-cols-1 sm:grid-cols-2 xl:grid-cols-4
           w-full
         `}>
 
@@ -75,6 +58,10 @@ export default function InfoCards() {
                 px-5
                 py-10
                 text-white
+                flex
+                flex-col
+                items-start
+                justify-between
               `}
               data-aos="fade-up"
               data-aos-delay={200*index}
