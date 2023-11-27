@@ -74,7 +74,7 @@ export default function Contact() {
         action={process.env.NEXT_PUBLIC_CONTACT_FORM_URL}
         method="post"
         className={`
-          
+          overflow-hidden
         `}
       >
         <div
@@ -83,7 +83,7 @@ export default function Contact() {
             container
             mx-auto
           `}
-          data-aos="fade-up"
+          data-aos="fade-down"
         >
 
           <label
@@ -221,6 +221,8 @@ export default function Contact() {
             allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
             src={selectedLocation.map}
+            data-aos="fade-left"
+            data-aos-delay="500"
             className={`
               w-full
               h-full
@@ -243,7 +245,7 @@ export default function Contact() {
             justify-between
           `}
           id="inputs-wrapper"
-          data-aos="fade-down"
+          data-aos="fade-up"
         >
           <Input
             name="nombre"
