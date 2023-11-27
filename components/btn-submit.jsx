@@ -4,7 +4,7 @@ import { titleFont } from '@/lib/fonts'
  * Link button
  * @param {string} label button label
  * @param {string} className extra css classes
- * @returns {jsx}
+ * @returns {JSX.Element}
  */
 export default function BtnSubmit({ label, className }) {
   return (

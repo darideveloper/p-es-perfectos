@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react'
 /**
  * Hero section component
  * @param {array} slides images to render
- * @return {jsx}
+ * @return {JSX.Element}
 */
 export default function Hero({ slides }) {
 

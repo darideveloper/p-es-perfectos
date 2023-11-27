@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
  * @param {boolean} isMenuOpen menu status
  * @param {function} setIsMenuOpen function to change menu status 
  * @param {string} className extra css classes
- * @returns {jsx}
+ * @returns {JSX.Element}
  */
 export default function BtnMenu({ isMenuOpen, setIsMenuOpen, className }) {
 

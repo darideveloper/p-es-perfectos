@@ -8,7 +8,7 @@
  * @param {function} onChange - function to handle change
  * @param {string} label - label text 
  * @param {string} className - extra classes
- * @returns {jsx}
+ * @returns {JSX.Element}
  */
 export default function Input({ name, placeholder, type, value, required = true, onChange, label, className }) {
   return (

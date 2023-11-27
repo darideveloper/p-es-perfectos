@@ -9,7 +9,7 @@ import { titleFont } from '@/lib/fonts.js'
 
 /**
  * Header with logo, menu, social and icons
- * @returns {jsx}
+ * @returns {JSX.Element}
  */
 export default function Header() {
 

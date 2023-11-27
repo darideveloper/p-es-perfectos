@@ -4,7 +4,7 @@
  * @param {string} text subtitle text
  * @param {boolean} isHidden if true, hide to user. Default: false
  * @param {string} className additional class names
- * @returns {jsx}
+ * @returns {JSX.Element}
  */
 export default function H2({ text, isHidden = false, className="" }) {
   return (

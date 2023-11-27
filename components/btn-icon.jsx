@@ -4,7 +4,7 @@
  * @param {string} path svg path
  * @param {string} className extra csss
  * @param {string} classNameSvg extra csss for svg
- * @returns {jsx}
+ * @returns {JSX.Element}
  */
 export default function BtnIcon({onClick, path, className, classNameSvg}) {
   return (

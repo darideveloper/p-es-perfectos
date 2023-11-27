@@ -7,7 +7,7 @@ import { useState } from "react"
 
 /**
  * Contact section
- * @returns {jsx}
+ * @returns {JSX.Element}
  */
 export default function Contact() {
 

@@ -3,7 +3,7 @@ import Image from "next/image"
 
 /**
  * Team section component
- * @returns {jsx}
+ * @returns {JSX.Element}
  */
 export default function Team() {
 

@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 
 /**
  * Info cards section
- * @return {jsx}
+ * @return {JSX.Element}
  */
 export default function InfoCards() {
 

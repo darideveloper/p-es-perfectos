@@ -10,7 +10,7 @@ import Contact from "@/sections/contact"
 /**
  * Home page component
  * @param {array} slides images to render in the hero section
- * @return {jsx}
+ * @return {JSX.Element}
  */
 export default function Home({slides}) {
   return (

@@ -8,7 +8,7 @@ import Link from 'next/link'
  * @param {string} className extra css classes
  * @param {boolean} isPhantom if true, the button will be transparent
  * @param {function} onClick function to handle click
- * @returns {jsx}
+ * @returns {JSX.Element}
  */
 export default function BtnCta({href, label, className, isPhantom=false, onClick=()=>{}}) {
   return (

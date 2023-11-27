@@ -12,7 +12,7 @@ import 'aos/dist/aos.css'
  * Main layout with header and footer
  * @param {node} children
  * @param {string} subPage current subpage
- * @returns {jsx}
+ * @returns {JSX.Element}
  */
 export default function RootLayout({ children, subPage = "" }) {
 
