@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 
 import Head from 'next/head'
 import Header from '@/sections/header.jsx'
+import Footer from '@/sections/footer.jsx'
 import AOS from 'aos'
 
 import 'aos/dist/aos.css'
@@ -42,7 +43,7 @@ export default function RootLayout({ children, subPage = "" }) {
         <main>
           {children}
         </main>
-        <footer>footer</footer>
+        <Footer />
       </div>
     </>
   )
