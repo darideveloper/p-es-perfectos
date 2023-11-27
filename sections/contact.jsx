@@ -290,7 +290,7 @@ export default function Contact() {
           <Input
             type="hidden"
             name="redirect"
-            value={host + "?thanks=true"}
+            value={"https://" + host + "?thanks=true"}
           />
 
         </div>
