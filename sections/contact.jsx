@@ -55,6 +55,7 @@ export default function Contact() {
             container
             mx-auto
           `}
+          data-aos="fade-up"
         >
 
           <label
@@ -196,6 +197,7 @@ export default function Contact() {
             justify-between
           `}
           id="inputs-wrapper"
+          data-aos="fade-down"
         >
           <Input
             name="name"
