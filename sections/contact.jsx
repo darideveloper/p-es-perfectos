@@ -11,6 +11,10 @@ import { useState } from "react"
  */
 export default function Contact() {
 
+  // Get page host
+  const host = typeof window !== "undefined" && window.location.host
+
+  // Locations data
   const locations = [
     {
       "name": "Sucursal 1",
@@ -43,7 +47,7 @@ export default function Contact() {
       />
 
       <form
-        action="#"
+        action={process.env.NEXT_PUBLIC_CONTACT_FORM_URL}
         method="post"
         className={`
           
@@ -81,7 +85,7 @@ export default function Contact() {
           >
 
             <select
-              name="location"
+              name="sucursal"
               id="location"
               value={selectedLocation.name}
               onChange={(e) => {
@@ -227,10 +231,11 @@ export default function Contact() {
           />
 
           <Input
-            name="Hora"
+            name="hora"
             type="time"
             label="Hora"
           />
+
 
           <BtnSubmit
             label="Agendar"
@@ -242,10 +247,33 @@ export default function Contact() {
               mt-4
             `}
           />
+
+          {/* hidden inputs */}
+          <Input
+            name="api_key"
+            type="hidden"
+            value={process.env.NEXT_PUBLIC_CONTACT_FORM_API_KEY}
+          />
+
+          <Input
+            type="hidden"
+            name="user"
+            value={process.env.NEXT_PUBLIC_CONTACT_FORM_USER}
+          />
+
+          <Input
+            type="hidden"
+            name="subject"
+            value="Nuevo mensaje de contacto en tu web!"
+          />
+          <Input
+            type="hidden"
+            name="redirect"
+            value={host + "?thanks=true"}
+          />
+
         </div>
-
       </form>
-
     </section>
   )
 }

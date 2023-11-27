@@ -2,6 +2,7 @@ import fs from 'fs/promises'
 import path from 'path'
 
 import RootLayout from "@/layouts/root-layout"
+import Contact from "@/sections/contact"
 
 /**
  * Home page component
@@ -11,7 +12,7 @@ import RootLayout from "@/layouts/root-layout"
 export default function Home({slides}) {
   return (
     <RootLayout>
-      <h1>Servicios</h1>
+      <Contact />
     </RootLayout>
   )
 }
