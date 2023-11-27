@@ -46,17 +46,24 @@ export default function Header() {
       id='header'
     >
 
-      <Image
+      <Link
+        href="/"
         className={`
-        logo
-        h-auto
-      `}
-        src={`/logo.webp`}
-        width={200}
-        height={61.5}
-        alt={`logo de Pies Perfectos`}
-        priority={true}
-      />
+          w-96
+        `}
+      >
+        <Image
+          className={`
+            logo
+            h-auto
+          `}
+          src={`/logo.webp`}
+          width={200}
+          height={61.5}
+          alt={`logo de Pies Perfectos`}
+          priority={true}
+        />
+      </Link>
 
       <div
         className={`
@@ -133,7 +140,7 @@ export default function Header() {
             md:hidden
           `}>
 
-          <Socials />          
+          <Socials />
 
         </div>
       </div>
