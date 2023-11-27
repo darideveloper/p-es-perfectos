@@ -3,7 +3,8 @@ import Loading from "@/components/loading"
 import Input from "@/components/input"
 import BtnSubmit from "@/components/btn-submit"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import Swal from 'sweetalert2'
 
 /**
  * Contact section
@@ -11,8 +12,28 @@ import { useState } from "react"
  */
 export default function Contact() {
 
-  // Get page host
-  const host = typeof window !== "undefined" && window.location.host
+  const [host, setHost] = useState("")
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // Get page host
+      setHost(window.location.host)
+
+      // Detect if is thanks page and show message
+      const urlParams = new URLSearchParams(window.location.search)
+      const thanks = urlParams.get('thanks')
+      if (thanks) {
+        Swal.fire({
+          title: "Cita solicitada",
+          text: "Te contactaremos a la brevedad por whatsapp o email, para confirmar tu cita",
+          icon: "success"
+        }).then (() => {
+          // rediret to home
+          window.location.href = "/"
+        })
+      }
+    }
+  }, [])
 
   // Locations data
   const locations = [
@@ -225,7 +246,7 @@ export default function Contact() {
           data-aos="fade-down"
         >
           <Input
-            name="name"
+            name="nombre"
             placeholder="Juan Pérez"
             type="text"
             label="Nombre"
