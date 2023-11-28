@@ -49,7 +49,7 @@ export default function Loading({ isVisible = true, bgColor, extraClasses = "", 
     >
       <img
         src={"spinner.gif"}
-        alt="loading spinner"
+        alt="spinner de cargando"
         className={`
           ${isRelative ? 'w-2/6 h-auto' : 'w-20 h-20'}
         `}
