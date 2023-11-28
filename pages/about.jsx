@@ -54,11 +54,16 @@ export default function Home() {
               my-16
             `}
           >
-            <div className="text">
+            <div 
+              className="text"
+              data-aos="fade-up"
+            >
               <H2
                 text={section.title}
               />
-              <p>{section.text}</p>
+              <p>
+                {section.text}
+              </p>
             </div>
 
             <Image

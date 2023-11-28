@@ -17,6 +17,7 @@ export default function ImageFullWidth ({src, alt}) {
         `}
         width={1920}
         height={1080}
+        data-aos="fade-up"
       />
   )
 }
