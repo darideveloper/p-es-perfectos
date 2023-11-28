@@ -13,14 +13,16 @@ export default function InfoCards() {
 
   useEffect(() => {
     // Copy serviuces data
-    let cardsData = [...servicesData]
-    cardsData = cardsData.map (card => {
-      if (card.description.length > 80) {
-        card.description = card.description.slice(0, 80) + '...'
+    const cardsDataSort = servicesData.map (card => {
+
+      const copiedCard = {...card}
+
+      if (copiedCard.description.length > 80) {
+        copiedCard.description = copiedCard.description.slice(0, 80) + '...'
       }
-      return card
+      return copiedCard
     })
-    setCardsData(cardsData)
+    setCardsData(cardsDataSort)
   }, [])
  
 
