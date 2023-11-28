@@ -14,13 +14,15 @@ export default function Home() {
   const articles = [
     {
       "title": "Título 1",
-      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quidem rerum obcaecati non quos tenetur temporibus, veniam numquam mollitia consequatur laboriosam, dicta atque, pariatur repellat necessitatibus! Neque ipsam sunt eius!",
-      "image": "/about/1.jpg"
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quidem rerum obcaecati non quos tenetur temporibus, veniam numquam mollitia consequatur laboriosam, dicta atque, pariatur repellat necessitatibus! Neque ipsam sunt eius!",
+      "image": "/about/1.jpg",
+      "id": "about-1"
     },
     {
       "title": "Título 2",
-      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quidem rerum obcaecati non quos tenetur temporibus, veniam numquam mollitia consequatur laboriosam, dicta atque, pariatur repellat necessitatibus! Neque ipsam sunt eius!",
-      "image": "/about/2.jpg"
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quidem rerum obcaecati non quos tenetur temporibus, veniam numquam mollitia consequatur laboriosam, dicta atque, pariatur repellat necessitatibus! Neque ipsam sunt eius!",
+      "image": "/about/2.jpg",
+      "id": "about-2"
     },
   ]
 

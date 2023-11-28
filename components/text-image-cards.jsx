@@ -3,14 +3,14 @@ import H2 from "@/components/h2"
 
 /**
  * Articles with text and image
- * @param {array} articles array of objects with title, text and image
+ * @param {array} articles array of objects with title, description and image
  * @returns {JSX.Element}
  */
 export default function TextImageCards({ articles }) {
 
   return (
 
-    <section 
+    <section
       className={`
         text-image-cards
         mx-auto
@@ -21,9 +21,8 @@ export default function TextImageCards({ articles }) {
     >
 
       {articles.map(article => (
-        <>
-          <article
-            className={`
+        <article
+          className={`
             wrapper
             flex
             flex-col md:flex-row
@@ -31,29 +30,31 @@ export default function TextImageCards({ articles }) {
             items-center
             justify-center
             gap-8
-            my-24
+            my-36
           `}
+          id={article.id}
+          key={article.id}
+        >
+          <div
+            className="text"
           >
-            <div
-              className="text"
-              data-aos="fade-up"
-            >
-              <H2
-                text={article.title}
-              />
-              <p>
-                {article.text}
-              </p>
-            </div>
-
-            <Image
-              src={article.image}
-              alt="Imagen de la página de acerca de nosotros"
-              width={500}
-              height={500}
+            <H2
+              text={article.title}
             />
-          </article>
-        </>
+            <p>
+              {article.description}
+            </p>
+          </div>
+
+          <Image
+            src={article.image}
+            alt="Imagen de la página de acerca de nosotros"
+            width={500}
+            height={500}
+            data-aos="fade-up"
+            data-aos-delay="600"
+          />
+        </article>
       ))}
     </section>
   )
