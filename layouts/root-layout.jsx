@@ -3,8 +3,8 @@ import { regularFont } from '@/lib/fonts'
 import { useEffect } from 'react'
 
 import Head from 'next/head'
-import Header from '@/sections/header.jsx'
-import Footer from '@/sections/footer.jsx'
+import Header from '@/components/header.jsx'
+import Footer from '@/components/footer.jsx'
 import WhatsappIcon from '@/components/whastapp-icon'
 
 import AOS from 'aos'

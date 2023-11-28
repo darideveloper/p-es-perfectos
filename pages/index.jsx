@@ -2,10 +2,10 @@ import fs from 'fs/promises'
 import path from 'path'
 
 import RootLayout from "@/layouts/root-layout"
-import Hero from "@/sections/hero"
-import InfoCards from "@/sections/info-cards"
-import Team from "@/sections/team"
-import Contact from "@/sections/contact"
+import Hero from "@/components/hero"
+import InfoCards from "@/components/info-cards"
+import Team from "@/components/team"
+import Contact from "@/components/contact"
 
 /**
  * Home page component

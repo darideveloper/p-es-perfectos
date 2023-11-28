@@ -1,5 +1,5 @@
 import RootLayout from "@/layouts/root-layout"
-import Contact from "@/sections/contact"
+import Contact from "@/components/contact"
 import H1 from "@/components/h1"
 import ImageFullWidth from "@/components/image-full-width"
 import TextImageCards from "@/components/text-image-cards"

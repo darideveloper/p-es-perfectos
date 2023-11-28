@@ -1,4 +1,4 @@
-import H2 from "../components/h2"
+import H2 from "./h2"
 import Image from "next/image"
 
 /**
