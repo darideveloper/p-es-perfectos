@@ -49,7 +49,7 @@ export default function Header() {
       <Link
         href="/"
         className={`
-          w-96
+          w-60 md:w-96
         `}
       >
         <Image
