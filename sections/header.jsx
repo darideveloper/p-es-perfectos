@@ -9,9 +9,10 @@ import Socials from './socials'
 
 /**
  * Header with logo, menu, social and icons
+ * @param {string} currentPage current page like services, about, etc
  * @returns {JSX.Element}
  */
-export default function Header() {
+export default function Header({currentPage}) {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -114,13 +115,16 @@ export default function Header() {
                     py-2
                     px-8 lg:p-2 xl:p-4
                     inline-block
-                    hover:opacity-50 md:hover:opacity-100 
+                    ${currentPage != link.label && "hover:opacity-50 md:hover:opacity-100"}
                     duration-300
                     text-white md:text-blue
                     ${titleFont.className}
                     border-b-2 
-                    border-transparent md:hover:border-blue
+                    border-transparent ${currentPage != link.label && "md:hover:border-blue"}
+                    // Disable active links
+                    ${currentPage == link.label && "opacity-60 cursor-default"}
                   `}
+                  disabled={currentPage == link.label}
                 >
                   {link.label}
                 </Link>

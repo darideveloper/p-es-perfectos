@@ -40,7 +40,9 @@ export default function RootLayout({ children, subPage = "" }) {
         content
         ${regularFont.className}
       `}>
-        <Header />
+        <Header
+          currentPage={subPage}
+        />
         <main>
           {children}
         </main>

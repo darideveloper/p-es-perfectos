@@ -26,7 +26,7 @@ export default function Home() {
   ]
 
   return (
-    <RootLayout>
+    <RootLayout subPage="Acerca de">
       <H1
         text="Acerca de Nosotros"
       />

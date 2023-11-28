@@ -9,9 +9,9 @@ import Contact from "@/sections/contact"
  * @param {array} slides images to render in the hero section
  * @return {JSX.Element}
  */
-export default function Home({slides}) {
+export default function Services({slides}) {
   return (
-    <RootLayout>
+    <RootLayout subPage="Servicios">
       <Contact />
     </RootLayout>
   )
