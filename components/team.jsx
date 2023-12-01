@@ -29,6 +29,7 @@ export default function Team() {
         container
         mx-auto
         my-32
+        hidden
       `}
       id="team"
     >
