@@ -3,6 +3,7 @@ import Contact from "@/components/contact"
 import H1 from "@/components/h1"
 import ImageFullWidth from "@/components/image-full-width"
 import TextImageCards from "@/components/text-image-cards"
+import { metaData } from "@/lib/meta"
 
 /**
  * Home page component
@@ -13,16 +14,10 @@ export default function Home() {
 
   const articles = [
     {
-      "title": "Título 1",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quidem rerum obcaecati non quos tenetur temporibus, veniam numquam mollitia consequatur laboriosam, dicta atque, pariatur repellat necessitatibus! Neque ipsam sunt eius!",
-      "image": "/about/1.jpg",
+      "title": "Pies Perfectos",
+      "description": metaData.description,
+      "image": "/about/1.webp",
       "id": "about-1"
-    },
-    {
-      "title": "Título 2",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quidem rerum obcaecati non quos tenetur temporibus, veniam numquam mollitia consequatur laboriosam, dicta atque, pariatur repellat necessitatibus! Neque ipsam sunt eius!",
-      "image": "/about/2.jpg",
-      "id": "about-2"
     },
   ]
 
