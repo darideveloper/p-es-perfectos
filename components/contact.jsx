@@ -38,13 +38,6 @@ export default function Contact() {
   // Locations data
   const locations = [
     {
-      "name": "Sucursal Coyula",
-      "address": "Juárez 20B, Col. Coyula, Tonala, Jalisco",
-      "map": 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14932.76514948161!2d-103.24677180744843!3d20.661795296773576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b431b63df17d%3A0xf6bf4553808c4432!2sJu%C3%A1rez%2020%2C%20Coyula%2C%2045410%20Coyula%2C%20Jal.!5e0!3m2!1ses-419!2smx!4v1701097833328!5m2!1ses-419!2smx',
-      "schedule": "Lunes a Viernes de 9:00 a 18:00 hrs",
-      "phone": "(331) 144 2486"
-    },
-    {
       "name": "Sucursal Jardines Vallarta",
       "address": "Maurice Baring 202, Col. Jardines Vallarta, Zapopan, Jalisco",
       "map": 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.767016030591!2d-103.42284702619412!3d20.679055599700607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428ae93b85feca3%3A0x7c5e6b278c39b9ac!2sMaurice%20Baring%20202%2C%20Jardines%20Vallarta%2C%2045027%20Zapopan%2C%20Jal.!5e0!3m2!1ses-419!2smx!4v1701097866260!5m2!1ses-419!2smx',

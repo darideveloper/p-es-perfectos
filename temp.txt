@@ -1,0 +1,10 @@
+design: https://apiepodologia.com/
+domain: pies-perfectos.com
+
+Te hago entrega del siguiente avance. 
+
+La sección de contacto con el mapa, selector de sucursal e información del cliente, ya está funcionando. 
+Necesito que me proporciones los horarios de las sucursales y el correo al que se enviarán los mensajes de contacto. 
+
+En la sección pasada de "Nuestro Equipo" aún falta que me enviés las fotos, nombres y cargos
+
