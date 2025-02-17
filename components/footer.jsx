@@ -1,4 +1,6 @@
 import Socials from "./socials"
+import Link from "next/link"
+
 /**
  * Footer section
  * @returns {JSX.Element}
@@ -43,7 +45,7 @@ export default function Footer() {
             &copy; 2023 <strong>Pies Perfectos</strong>
           </span>
           <span className="powered">
-            Powered by <a href="https://www.darideveloper.com/" target="_blank">Dari Developer</a>
+            Powered by <Link href="https://api.whatsapp.com/send?phone=5214493402622" target="_blank">Dari Developer</Link>
           </span>
         </p>
 
